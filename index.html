@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDD</title>
+
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="container">
+        <h1 class="almond-text">
+          <span> EDD & Gestational Age Calc.</span>
+        </h1>
+
+        <blockquote>
+          <h5>
+            DISCLAIMER: This does not serve as a medical test to confirm
+            pregnancy. If you do suspect you are pregnant, kindly visit your
+            health physician.
+          </h5>
+        </blockquote>
+
+        <form class="pink">
+          <div class="container input-field">
+            <h5>Select the first day of your Last Menstrual Period</h5>
+            <input type="text" name="lmp" id="date" class="datepicker" />
+          </div>
+
+          <br />
+          <br />
+          <div class="container center-align">
+            <button class="btn brown waves-effect waves-green">
+              Calculate
+            </button>
+          </div>
+          <br />
+          <div class="container">
+            <h5 class="message"></h5>
+          </div>
+        </form>
+        <div></div>
+      </div>
+    </div>
+    <br /><br /><br />
+    <footer class="page-footer grey darken-2">
+      <div class="footer-copyright grey darken-2">
+        <div class="container">Copyright &copy; 2020 Chijindu Nwakama</div>
+      </div>
+    </footer>
+
+    <style>
+      body {
+        background-color: peachpuff;
+      }
+      h1 {
+        font-family: 'Piazzolla', serif;
+      }
+      blockquote {
+        font-family: 'Chilanka', cursive;
+      }
+      form {
+        padding: 70px;
+        border-radius: 20px;
+      }
+      /* .btncon {
+        padding-right: 50px;
+      } */
+    </style>
+
+    <!--JavaScript at end of body for optimized loading-->
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('.datepicker').datepicker({
+          format: 'mm-dd-yyyy',
+          autoClose: true,
+          showClearBtn: true,
+          today: 'Today',
+          selectMonths: true,
+        });
+      });
+    </script>
+  </body>
+</html>
