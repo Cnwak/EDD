@@ -1,8 +1,7 @@
 //DEFINE DATE
 const dateValue = document.querySelector('.datepicker');
 const message = document.querySelector('.message');
-//EVENT LISTENER
-document.querySelector('form').addEventListener('submit', getDate);
+
 
 function getDate(e) {
   //INPUT VALUE OF DATE ASSIGNMENT
@@ -25,7 +24,7 @@ function getDate(e) {
   dateResult.setDate(dateResult.getDate() + 7);
   const dateString = dateResult.toDateString();
 
-  if (!(new Date(dateV) >= new Date())) {
+  if (!(new Date(dateV) >= new Date()) && (dateV !== '')) {
     //CALCULATING GESTATIONAL AGE USING CURRENT DATE AND DATE OF LMP
     const ga = Math.abs(new Date() - new Date(dateV));
 
@@ -43,7 +42,7 @@ function getDate(e) {
     message.textContent = ` Your expected delivery date is ${dateString} & you are ${gestationalAge} week(s) pregnant`;
 
     //console.log(dateResult);
-  } else if (dateV == '') {
+  } else if (dateV === '') {
     M.toast({ html: 'Invalid Date!' });
   } else {
     //INCASE OF ERROR
@@ -53,3 +52,6 @@ function getDate(e) {
 
   e.preventDefault();
 }
+
+//EVENT LISTENER
+document.querySelector('form').addEventListener('submit', getDate);
