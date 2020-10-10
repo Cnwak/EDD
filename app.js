@@ -25,7 +25,7 @@ function getDate(e) {
   dateResult.setDate(dateResult.getDate() + 7);
   const dateString = dateResult.toDateString();
 
-  if (new Date() > new Date(dateV)) {
+  if (!(new Date(dateV) >= new Date())) {
     //CALCULATING GESTATIONAL AGE USING CURRENT DATE AND DATE OF LMP
     const ga = Math.abs(new Date() - new Date(dateV));
 
