@@ -41,7 +41,7 @@ console.log(dateString);
 
     //OUTPUT THE ANSWER TO RESULT
     message.style.color = 'yellow';
-    message.textContent = ` Your expected delivery date is ${dateString} & you are ${gestationalAge} week(s) pregnant`;
+    message.textContent = ` Your expected delivery date is ${dateResult} & you are ${gestationalAge} week(s) pregnant`;
 
     //console.log(dateResult);
   } else if (dateV === '') {
