@@ -12,16 +12,18 @@ function getDate(e) {
 
   //USING FORMULA FOR CALCULATING EDD, FIRSTLY SUBTRACT 3 MONTHS
   dateResult.setMonth(dateResult.getMonth() - 3);
-
+console.log(dateResult);
   //console.log(dateResult);
 
   //THEN ADD A YEAR
   dateResult.setFullYear(dateResult.getFullYear() + 1);
-
+  console.log(dateResult)
   //console.log(dateResult);
 console.log(dateV);
   //FINALLY ADD 7 DAYS
   dateResult.setDate(dateResult.getDate() + 7);
+
+  console.log(dateResult)
   const dateString = dateResult.toDateString();
 console.log(dateString);
   if (!(new Date(dateV) >= new Date()) && (dateV !== '')) {
