@@ -19,13 +19,15 @@ function getDate(e) {
   dateResult.setFullYear(dateResult.getFullYear() + 1);
 
   //console.log(dateResult);
-
+console.log(dateV);
   //FINALLY ADD 7 DAYS
   dateResult.setDate(dateResult.getDate() + 7);
   const dateString = dateResult.toDateString();
-
+console.log(dateString);
   if (!(new Date(dateV) >= new Date()) && (dateV !== '')) {
     //CALCULATING GESTATIONAL AGE USING CURRENT DATE AND DATE OF LMP
+
+    console.log(dateV);
     const ga = Math.abs(new Date() - new Date(dateV));
 
     //CONVERTING THE MILLISECONDS FROM ABOVE INTO DAYS
