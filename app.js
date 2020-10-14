@@ -39,9 +39,17 @@ console.log(dateString);
 
     const gestationalAge = Math.floor(gaFull);
 
-    //OUTPUT THE ANSWER TO RESULT
-    message.style.color = 'yellow';
-    message.textContent = ` Your expected delivery date is ${dateString} & you are ${gestationalAge} week(s) pregnant`;
+    if(gestationalAge === 0){
+//OUTPUT THE ANSWER TO RESULT
+message.style.color = 'green';
+message.textContent = ` It's too early to say if you're pregnant for sure.`;
+    }
+    else{
+//OUTPUT THE ANSWER TO RESULT
+message.style.color = 'yellow';
+message.textContent = ` Your expected delivery date is ${dateString} & you are ${gestationalAge} week(s) pregnant`;
+    }
+    
 
     //console.log(dateResult);
   } else if (dateV === '') {
